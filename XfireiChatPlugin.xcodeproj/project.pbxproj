@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A5EEF6013C8BA17008A3A8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5EEF5F13C8BA17008A3A8B /* Cocoa.framework */; };
+		1A5EEF6A13C8BA17008A3A8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A5EEF6813C8BA17008A3A8B /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A5EEF5C13C8BA17008A3A8B /* XfireiChatPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XfireiChatPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5EEF5F13C8BA17008A3A8B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1A5EEF6213C8BA17008A3A8B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1A5EEF6313C8BA17008A3A8B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1A5EEF6413C8BA17008A3A8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1A5EEF6713C8BA17008A3A8B /* XfireiChatPlugin-Info.plist */ = {isa = PBXFileReference; path = "XfireiChatPlugin-Info.plist"; sourceTree = "<group>"; };
+		1A5EEF6913C8BA17008A3A8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A5EEF6B13C8BA17008A3A8B /* XfireiChatPlugin-Prefix.pch */ = {isa = PBXFileReference; path = "XfireiChatPlugin-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A5EEF5913C8BA17008A3A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5EEF6013C8BA17008A3A8B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A5EEF5113C8BA17008A3A8B = {
+			isa = PBXGroup;
+			children = (
+				1A5EEF6513C8BA17008A3A8B /* XfireiChatPlugin */,
+				1A5EEF5E13C8BA17008A3A8B /* Frameworks */,
+				1A5EEF5D13C8BA17008A3A8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A5EEF5D13C8BA17008A3A8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A5EEF5C13C8BA17008A3A8B /* XfireiChatPlugin.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A5EEF5E13C8BA17008A3A8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A5EEF5F13C8BA17008A3A8B /* Cocoa.framework */,
+				1A5EEF6113C8BA17008A3A8B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A5EEF6113C8BA17008A3A8B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A5EEF6213C8BA17008A3A8B /* AppKit.framework */,
+				1A5EEF6313C8BA17008A3A8B /* CoreData.framework */,
+				1A5EEF6413C8BA17008A3A8B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1A5EEF6513C8BA17008A3A8B /* XfireiChatPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				1A5EEF6613C8BA17008A3A8B /* Supporting Files */,
+			);
+			path = XfireiChatPlugin;
+			sourceTree = "<group>";
+		};
+		1A5EEF6613C8BA17008A3A8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A5EEF6713C8BA17008A3A8B /* XfireiChatPlugin-Info.plist */,
+				1A5EEF6813C8BA17008A3A8B /* InfoPlist.strings */,
+				1A5EEF6B13C8BA17008A3A8B /* XfireiChatPlugin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A5EEF5B13C8BA17008A3A8B /* XfireiChatPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A5EEF6E13C8BA17008A3A8B /* Build configuration list for PBXNativeTarget "XfireiChatPlugin" */;
+			buildPhases = (
+				1A5EEF5813C8BA17008A3A8B /* Sources */,
+				1A5EEF5913C8BA17008A3A8B /* Frameworks */,
+				1A5EEF5A13C8BA17008A3A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XfireiChatPlugin;
+			productName = XfireiChatPlugin;
+			productReference = 1A5EEF5C13C8BA17008A3A8B /* XfireiChatPlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A5EEF5313C8BA17008A3A8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Grapple Mobile";
+			};
+			buildConfigurationList = 1A5EEF5613C8BA17008A3A8B /* Build configuration list for PBXProject "XfireiChatPlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A5EEF5113C8BA17008A3A8B;
+			productRefGroup = 1A5EEF5D13C8BA17008A3A8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A5EEF5B13C8BA17008A3A8B /* XfireiChatPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A5EEF5A13C8BA17008A3A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5EEF6A13C8BA17008A3A8B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A5EEF5813C8BA17008A3A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A5EEF6813C8BA17008A3A8B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A5EEF6913C8BA17008A3A8B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A5EEF6C13C8BA17008A3A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1A5EEF6D13C8BA17008A3A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1A5EEF6F13C8BA17008A3A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XfireiChatPlugin/XfireiChatPlugin-Prefix.pch";
+				INFOPLIST_FILE = "XfireiChatPlugin/XfireiChatPlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1A5EEF7013C8BA17008A3A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XfireiChatPlugin/XfireiChatPlugin-Prefix.pch";
+				INFOPLIST_FILE = "XfireiChatPlugin/XfireiChatPlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A5EEF5613C8BA17008A3A8B /* Build configuration list for PBXProject "XfireiChatPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A5EEF6C13C8BA17008A3A8B /* Debug */,
+				1A5EEF6D13C8BA17008A3A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A5EEF6E13C8BA17008A3A8B /* Build configuration list for PBXNativeTarget "XfireiChatPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A5EEF6F13C8BA17008A3A8B /* Debug */,
+				1A5EEF7013C8BA17008A3A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A5EEF5313C8BA17008A3A8B /* Project object */;
+}
