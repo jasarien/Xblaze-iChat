@@ -5,15 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>XfireiChatPlugin</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.jamsoft.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.jamsoft.xfireplugin</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>Xfire</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -22,9 +20,19 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2011 Grapple Mobile. All rights reserved.</string>
+	<key>IMServiceCapabilities</key>
+	<array>
+		<string>IMServiceCapabilityInstantMessagingSupport</string>
+		<string>IMHandleCapabilityMessaging</string>
+		<string>IMServiceCapabilityGroupListSupport</string>
+	</array>
+	<key>IMUsesEnableSSLAccountSetting</key>
+	<false/>
+	<key>IMUsesServerHostAccountSetting</key>
+	<false/>
+	<key>IMUsesServerPortAccountSetting</key>
+	<false/>
 	<key>NSPrincipalClass</key>
-	<string></string>
+	<string>XfireServicePlugin</string>
 </dict>
 </plist>

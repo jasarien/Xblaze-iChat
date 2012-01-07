@@ -3,5 +3,13 @@
 //
 
 #ifdef __OBJC__
+
 	#import <Cocoa/Cocoa.h>
+
+	#ifdef DEBUG
+	#define DebugLog(s, ...) NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+	#else
+	#define DebugLog(x...)
+	#endif
+
 #endif
