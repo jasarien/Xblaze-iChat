@@ -2928,7 +2928,6 @@
 
 /* Begin PBXFileReference section */
 		1A5EEF5C13C8BA17008A3A8B /* Xblaze.imserviceplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xblaze.imserviceplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A5EEF6713C8BA17008A3A8B /* Xblaze-iChat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Xblaze-iChat-Info.plist"; sourceTree = "<group>"; };
 		1A5EEF6913C8BA17008A3A8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A5EEF7113C8BA40008A3A8B /* IMServicePlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMServicePlugIn.framework; path = System/Library/Frameworks/IMServicePlugIn.framework; sourceTree = SDKROOT; };
 		1A5EEF7313C8BB10008A3A8B /* XfireServicePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XfireServicePlugin.h; sourceTree = "<group>"; };
@@ -2992,6 +2991,7 @@
 		1AB159D514B4FBD40004698B /* MFDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFDataScanner.m; sourceTree = "<group>"; };
 		1AB159D614B4FBD40004698B /* MFDataEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFDataEmitter.h; sourceTree = "<group>"; };
 		1AB159D714B4FBD40004698B /* MFDataEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MFDataEmitter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1AFE050B14B8FA0C004E5444 /* Xblaze-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Xblaze-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1AFE535D14B8F15100E4DA42 /* XF_123KICK.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_123KICK.ICO; sourceTree = "<group>"; };
 		1AFE535E14B8F15100E4DA42 /* XF_1602AD.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_1602AD.ICO; sourceTree = "<group>"; };
 		1AFE535F14B8F15100E4DA42 /* XF_1701AD.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_1701AD.ICO; sourceTree = "<group>"; };
@@ -5995,7 +5995,7 @@
 		1A5EEF6613C8BA17008A3A8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1A5EEF6713C8BA17008A3A8B /* Xblaze-iChat-Info.plist */,
+				1AFE050B14B8FA0C004E5444 /* Xblaze-Info.plist */,
 				1A5EEF6813C8BA17008A3A8B /* InfoPlist.strings */,
 				1AFE69E314B8F65B00E4DA42 /* Xblaze-iChat-Prefix.pch */,
 			);
@@ -11968,7 +11968,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XfireiChatPlugin/Xblaze-iChat-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				INFOPLIST_FILE = "XfireiChatPlugin/XfireiChatPlugin-Info.plist";
+				INFOPLIST_FILE = "Xblaze-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/iChat/PlugIns";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11987,7 +11987,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XfireiChatPlugin/Xblaze-iChat-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				INFOPLIST_FILE = "XfireiChatPlugin/XfireiChatPlugin-Info.plist";
+				INFOPLIST_FILE = "Xblaze-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/iChat/PlugIns";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
