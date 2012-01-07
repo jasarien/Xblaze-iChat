@@ -2927,10 +2927,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A5EEF5C13C8BA17008A3A8B /* XfireiChatPlugin.imserviceplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XfireiChatPlugin.imserviceplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A5EEF6713C8BA17008A3A8B /* XfireiChatPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XfireiChatPlugin-Info.plist"; sourceTree = "<group>"; };
+		1A5EEF5C13C8BA17008A3A8B /* Xblaze.imserviceplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xblaze.imserviceplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5EEF6713C8BA17008A3A8B /* Xblaze-iChat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Xblaze-iChat-Info.plist"; sourceTree = "<group>"; };
 		1A5EEF6913C8BA17008A3A8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1A5EEF6B13C8BA17008A3A8B /* XfireiChatPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XfireiChatPlugin-Prefix.pch"; sourceTree = "<group>"; };
 		1A5EEF7113C8BA40008A3A8B /* IMServicePlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMServicePlugIn.framework; path = System/Library/Frameworks/IMServicePlugIn.framework; sourceTree = SDKROOT; };
 		1A5EEF7313C8BB10008A3A8B /* XfireServicePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XfireServicePlugin.h; sourceTree = "<group>"; };
 		1A5EEF7413C8BB10008A3A8B /* XfireServicePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XfireServicePlugin.m; sourceTree = "<group>"; };
@@ -5876,6 +5875,7 @@
 		1AFE5E9D14B8F15C00E4DA42 /* XF_ZUMA.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_ZUMA.ICO; sourceTree = "<group>"; };
 		1AFE5E9E14B8F15C00E4DA42 /* XF_ZUMAW.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_ZUMAW.ICO; sourceTree = "<group>"; };
 		1AFE5E9F14B8F15C00E4DA42 /* XF_ZUO.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_ZUO.ICO; sourceTree = "<group>"; };
+		1AFE69E314B8F65B00E4DA42 /* Xblaze-iChat-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Xblaze-iChat-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -5910,7 +5910,7 @@
 		1A5EEF5D13C8BA17008A3A8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A5EEF5C13C8BA17008A3A8B /* XfireiChatPlugin.imserviceplugin */,
+				1A5EEF5C13C8BA17008A3A8B /* Xblaze.imserviceplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -5995,9 +5995,9 @@
 		1A5EEF6613C8BA17008A3A8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1A5EEF6713C8BA17008A3A8B /* XfireiChatPlugin-Info.plist */,
+				1A5EEF6713C8BA17008A3A8B /* Xblaze-iChat-Info.plist */,
 				1A5EEF6813C8BA17008A3A8B /* InfoPlist.strings */,
-				1A5EEF6B13C8BA17008A3A8B /* XfireiChatPlugin-Prefix.pch */,
+				1AFE69E314B8F65B00E4DA42 /* Xblaze-iChat-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -8912,9 +8912,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A5EEF5B13C8BA17008A3A8B /* XfireiChatPlugin */ = {
+		1A5EEF5B13C8BA17008A3A8B /* Xblaze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A5EEF6E13C8BA17008A3A8B /* Build configuration list for PBXNativeTarget "XfireiChatPlugin" */;
+			buildConfigurationList = 1A5EEF6E13C8BA17008A3A8B /* Build configuration list for PBXNativeTarget "Xblaze" */;
 			buildPhases = (
 				1A5EEF5813C8BA17008A3A8B /* Sources */,
 				1A5EEF5913C8BA17008A3A8B /* Frameworks */,
@@ -8925,9 +8925,9 @@
 			);
 			dependencies = (
 			);
-			name = XfireiChatPlugin;
+			name = Xblaze;
 			productName = XfireiChatPlugin;
-			productReference = 1A5EEF5C13C8BA17008A3A8B /* XfireiChatPlugin.imserviceplugin */;
+			productReference = 1A5EEF5C13C8BA17008A3A8B /* Xblaze.imserviceplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -8939,7 +8939,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Grapple Mobile";
 			};
-			buildConfigurationList = 1A5EEF5613C8BA17008A3A8B /* Build configuration list for PBXProject "XfireiChatPlugin" */;
+			buildConfigurationList = 1A5EEF5613C8BA17008A3A8B /* Build configuration list for PBXProject "Xblaze-iChat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -8951,7 +8951,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A5EEF5B13C8BA17008A3A8B /* XfireiChatPlugin */,
+				1A5EEF5B13C8BA17008A3A8B /* Xblaze */,
 			);
 		};
 /* End PBXProject section */
@@ -11862,7 +11862,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf /users/james/Library/iChat/PlugIns/XfireiChatPlugin.imserviceplugin\ncp -R /Users/james/Library/Developer/Xcode/DerivedData/XfireiChatPlugin-eohbrhpgwtssdhcsqvikavbqtdza/Build/Products/Debug/XfireiChatPlugin.imserviceplugin /users/james/Library/iChat/PlugIns/XfireiChatPlugin.imserviceplugin\nexport SUDO_ASKPASS=/users/james/.sap\nsudo -A killall imagent\nopen -a iChat";
+			shellScript = "rm -rf /users/james/Library/iChat/PlugIns/Xblaze.imserviceplugin\ncp -R /Users/james/Library/Developer/Xcode/DerivedData/Xblaze-iChat-bhrccjpgjqpxutbjlcowumsluoak/Build/Products/Debug/Xblaze.imserviceplugin /users/james/Library/iChat/PlugIns/Xblaze.imserviceplugin\nexport SUDO_ASKPASS=/users/james/.sap\nsudo -A killall imagent\nopen -a iChat";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -11963,12 +11963,13 @@
 		1A5EEF6F13C8BA17008A3A8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XfireiChatPlugin/XfireiChatPlugin-Prefix.pch";
+				GCC_PREFIX_HEADER = "XfireiChatPlugin/Xblaze-iChat-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "XfireiChatPlugin/XfireiChatPlugin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/iChat/PlugIns";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
@@ -11981,12 +11982,13 @@
 		1A5EEF7013C8BA17008A3A8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XfireiChatPlugin/XfireiChatPlugin-Prefix.pch";
+				GCC_PREFIX_HEADER = "XfireiChatPlugin/Xblaze-iChat-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "XfireiChatPlugin/XfireiChatPlugin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/iChat/PlugIns";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
@@ -11999,7 +12001,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A5EEF5613C8BA17008A3A8B /* Build configuration list for PBXProject "XfireiChatPlugin" */ = {
+		1A5EEF5613C8BA17008A3A8B /* Build configuration list for PBXProject "Xblaze-iChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A5EEF6C13C8BA17008A3A8B /* Debug */,
@@ -12008,7 +12010,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A5EEF6E13C8BA17008A3A8B /* Build configuration list for PBXNativeTarget "XfireiChatPlugin" */ = {
+		1A5EEF6E13C8BA17008A3A8B /* Build configuration list for PBXNativeTarget "Xblaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A5EEF6F13C8BA17008A3A8B /* Debug */,

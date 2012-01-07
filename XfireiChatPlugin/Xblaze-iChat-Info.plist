@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>XfireiChatPlugin</string>
+	<string>Xblaze</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.jamsoft.xfireplugin</string>
+	<string>com.jamsoft.xblazeichat</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
