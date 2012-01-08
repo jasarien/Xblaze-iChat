@@ -33,19 +33,16 @@
 
 - (oneway void)login
 {
-	NSLog(@"Logging in");
 	[_xfSession connect];
 }
 
 - (oneway void)logout
 {
-	NSLog(@"Logging out");
 	[_xfSession disconnect];
 }
 
 - (oneway void)updateAccountSettings:(NSDictionary *)accountSettings
 {
-	NSLog(@"Update account settings: %@", accountSettings);
 	_accountSettings = [accountSettings retain];
 }
 
@@ -61,7 +58,6 @@
 
 - (oneway void)sendMessage:(IMServicePlugInMessage *)message toHandle:(NSString *)handle
 {
-	NSLog(@"send message");
 	XfireFriend *friend = [_xfSession friendForUserName:handle];
 	XfireChat *chat = [_xfSession chatForSessionID:[friend sessionID]];
 	if (!chat)
@@ -115,8 +111,6 @@
 
 - (oneway void)requestPictureForHandle:(NSString *)handle withIdentifier:(NSString *)identifier
 {
-	NSLog(@"request picture for handle %@, with id: %@", handle, identifier);
-	
 	NSMutableDictionary *properties = [NSMutableDictionary dictionary];
 	
 	XfireFriend *friend = [_xfSession friendForUserName:handle];
@@ -155,8 +149,6 @@
 
 - (void)xfireSessionLoginFailed:(XfireSession *)session reason:(NSString *)reason
 {
-	NSLog(@"Xblaze session login failed %@", reason);
-	
 	if( [reason isEqualToString:kXfireVersionTooOldReason] )
 	{
 		NSError *error = [NSError errorWithDomain:@"XBErrorDomain"
@@ -264,9 +256,7 @@
 		NSString *gameShortName = [gameInfo objectForKey:kMFGameRegistryShortNameKey];
 		NSString *iconName = [NSString stringWithFormat:@"XF_%@", [gameShortName uppercaseString]];
 		NSString *iconPath = [[NSBundle bundleForClass:[self class]] pathForResource:iconName ofType:@"ICO"];
-		NSLog(@"Icon path : %@", iconPath);
 		NSData *iconData = [[[NSData alloc] initWithContentsOfFile:iconPath] autorelease];
-		NSLog(@"iconData: %@", iconData);
 		if (iconData)
 		{
 			[properties setObject:[[iconData sha1Hash] stringRepresentation] forKey:IMHandlePropertyPictureIdentifier];
@@ -276,7 +266,6 @@
 	{
 		NSString *iconPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"XfireLarge" ofType:@"png"];
 		NSData *iconData = [[[NSData alloc] initWithContentsOfFile:iconPath] autorelease];
-		NSLog(@"Large xfire Icon: %@", iconData);
 		if (iconData)
 		{
 			[properties setObject:[[iconData sha1Hash] stringRepresentation] forKey:IMHandlePropertyPictureIdentifier];

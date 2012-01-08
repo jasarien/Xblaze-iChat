@@ -67,7 +67,6 @@ NSString *kMFGameRegistryMacAppPathsKey = @"MacAppPaths";
 		
 		// Load the master game dictionary first
 		path = [[NSBundle bundleForClass:[self class]] pathForResource:@"Games" ofType:@"plist"];
-		NSLog(@"Path: %@", path);
 		if( path == nil )
 		{
 			// TODO: need to get some kind of warning up to the user
@@ -272,7 +271,6 @@ keys are:
 	{
 		NSString *shortGameName = [gameInfo objectForKey:kMFGameRegistryShortNameKey];
 		NSString *iconFileName = [[NSString stringWithFormat:@"XF_%@", shortGameName] uppercaseString];
-		NSLog(@"icon file name: %@", iconFileName);
 		icon = [[[NSImage alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:iconFileName ofType:@"ICO"]] autorelease];
 		if (!icon)
 		{
