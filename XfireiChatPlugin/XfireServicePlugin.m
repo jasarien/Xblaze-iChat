@@ -13,6 +13,7 @@
 #import "XfireSession_Private.h"
 #import "XfireFriendGroup_Private.h"
 #import "XfireFriendGroupController.h"
+#import "NSData_XfireAdditions.h"
 
 @implementation XfireServicePlugin
 
@@ -112,6 +113,38 @@
 	[_application plugInDidUpdateGroupList:ichatGroups error:nil];
 }
 
+- (oneway void)requestPictureForHandle:(NSString *)handle withIdentifier:(NSString *)identifier
+{
+	NSLog(@"request picture for handle %@, with id: %@", handle, identifier);
+	
+	NSMutableDictionary *properties = [NSMutableDictionary dictionary];
+	
+	XfireFriend *friend = [_xfSession friendForUserName:handle];
+	NSDictionary *gameInfo = [MFGameRegistry infoForGameID:[friend gameID]];
+	if (gameInfo)
+	{
+		NSString *gameShortName = [gameInfo objectForKey:kMFGameRegistryShortNameKey];
+		NSString *iconName = [NSString stringWithFormat:@"XF_%@", [gameShortName uppercaseString]];
+		NSString *iconPath = [[NSBundle bundleForClass:[self class]] pathForResource:iconName ofType:@"ICO"];
+		NSData *iconData = [[[NSData alloc] initWithContentsOfFile:iconPath] autorelease];
+		if (iconData)
+		{
+			[properties setObject:iconData forKey:IMHandlePropertyPictureData];
+		}
+	}
+	else
+	{
+		NSString *iconPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"XfireLarge" ofType:@"png"];
+		NSData *iconData = [[[NSData alloc] initWithContentsOfFile:iconPath] autorelease];
+		if (iconData)
+		{
+			[properties setObject:iconData forKey:IMHandlePropertyPictureData];
+		}
+	}
+	
+	[_application plugInDidUpdateProperties:properties ofHandle:handle];
+}
+
 #pragma mark XfireSessionDelegate
 
 - (void)xfireGetSession:(XfireSession *)session userName:(NSString **)aName password:(NSString **)aPassword
@@ -126,30 +159,29 @@
 	
 	if( [reason isEqualToString:kXfireVersionTooOldReason] )
 	{
-		[[NSAlert alertWithMessageText:@"Version Too Old"
-						defaultButton:@"OK"
-					  alternateButton:nil
-						  otherButton:nil
-			informativeTextWithFormat:@"Your Xfire version is too old."] runModal];
+		NSError *error = [NSError errorWithDomain:@"XBErrorDomain"
+											 code:[reason hash]
+										 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Your Xfire version is too old.", NSLocalizedDescriptionKey, nil]];
+		[_application plugInDidLogOutWithError:error reconnect:NO];
 	}
 	else if( [reason isEqualToString:kXfireInvalidPasswordReason] )
 	{
-		[[NSAlert alertWithMessageText:@"Wrong Username or Password"
-						 defaultButton:@"OK"
-					   alternateButton:nil
-						   otherButton:nil
-			 informativeTextWithFormat:@"Unable to log in with the supplied username or password.\nPlease check them and try again."] runModal];
+		[_application plugInDidFailToAuthenticate];
 	}
 	else if( [reason isEqualToString:kXfireNetworkErrorReason] )
 	{
-		[[NSAlert alertWithMessageText:@"Unable to Connect"
-						 defaultButton:@"OK"
-					   alternateButton:nil
-						   otherButton:nil
-			 informativeTextWithFormat:@"There was an error connecting to Xfire.\nPlease check your network connection and try again.\nThis may happen is Xfire's servers are experiencing difficulties."] runModal];
+		NSError *error = [NSError errorWithDomain:@"XBErrorDomain"
+											 code:[reason hash]
+										 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"There was an error connecting to Xfire.\nPlease check your network connection and try again.\nThis may happen is Xfire's servers are experiencing difficulties.", NSLocalizedDescriptionKey, nil]];
+		[_application plugInDidLogOutWithError:error reconnect:NO];
 	}	
-	
-	[_application plugInDidLogOutWithError:nil reconnect:NO];
+	else
+	{
+		NSError *error = [NSError errorWithDomain:@"XBErrorDomain"
+											 code:[reason hash]
+										 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:reason, NSLocalizedDescriptionKey, nil]];
+		[_application plugInDidLogOutWithError:error reconnect:NO];	
+	}
 }
 
 - (XfireSkin *)xfireSessionSkin:(XfireSession *)session
@@ -175,54 +207,6 @@
 		[_application plugInDidLogOutWithError:nil reconnect:NO];
 	}
 }
-
-//- (void)updateClanLists
-//{
-//	NSArray *friends = [_xfSession friends];
-//	for (XfireFriend *friend in friends)
-//	{
-//		if ([friend isClanMember])
-//		{
-//			AIListContact *contact = [[adium contactController] existingContactWithService:[self service] account:self UID:[friend userName]];
-//			if (!contact)
-//			{
-//				contact = [[adium contactController] contactWithService:[self service] account:self UID:[friend userName]];
-//			}
-//			
-//			[contact setOnline:[friend isOnline] notify:NotifyLater silently:YES];
-//			
-//			NSString *nickName = [friend displayName];
-//			
-//			[contact setServersideAlias:nickName silently:YES];
-//			[AIUserIcons flushAllCaches];
-//			[AIUserIcons setServersideIconData:[[friend displayImage] TIFFRepresentation] forObject:contact notify:NotifyLater];
-//			[contact setStatusMessage:[[[NSAttributedString alloc] initWithString:[friend statusDisplayString]] autorelease] notify:NotifyLater];
-//			NSRange afkRange = [[friend statusDisplayString] rangeOfString:@"(AFK) Away From Keyboard"];
-//			if (afkRange.location == NSNotFound)
-//			{
-//				[contact setStatusWithName:nil statusType:AIAvailableStatusType notify:NotifyLater];
-//			}
-//			else
-//			{
-//				[contact setStatusWithName:nil statusType:AIAwayStatusType notify:NotifyLater];
-//			}
-//			
-//			NSMutableSet *clans = [NSMutableSet set];
-//			for (NSNumber *clanID in [friend clanIDs])
-//			{
-//				[clans addObject:[[[[_xfSession friendGroupController] clans] groupForID:[clanID intValue]] groupName]];
-//			}
-//			
-//			if ([friend isDirectFriend])
-//			{
-//				[clans addObject:@"Xfire"];
-//			}
-//			
-//			[contact setRemoteGroupNames:clans];
-//			[contact notifyOfChangedPropertiesSilently:YES];
-//		}
-//	}
-//}
 
 - (void)xfireSession:(XfireSession *)session didBeginChat:(XfireChat *)chat
 {
@@ -272,7 +256,34 @@
 		[properties setObject:[NSNumber numberWithInt:IMHandleAvailabilityOffline] forKey:IMHandlePropertyAvailability];
 	}
 	
-	[properties setObject:[fr statusString] forKey:IMHandlePropertyStatusMessage];
+	[properties setObject:[fr statusDisplayString] forKey:IMHandlePropertyStatusMessage];
+	
+	NSDictionary *gameInfo = [MFGameRegistry infoForGameID:[fr gameID]];
+	if (gameInfo)
+	{
+		NSString *gameShortName = [gameInfo objectForKey:kMFGameRegistryShortNameKey];
+		NSString *iconName = [NSString stringWithFormat:@"XF_%@", [gameShortName uppercaseString]];
+		NSString *iconPath = [[NSBundle bundleForClass:[self class]] pathForResource:iconName ofType:@"ICO"];
+		NSLog(@"Icon path : %@", iconPath);
+		NSData *iconData = [[[NSData alloc] initWithContentsOfFile:iconPath] autorelease];
+		NSLog(@"iconData: %@", iconData);
+		if (iconData)
+		{
+			[properties setObject:[[iconData sha1Hash] stringRepresentation] forKey:IMHandlePropertyPictureIdentifier];
+		}
+	}
+	else
+	{
+		NSString *iconPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"XfireLarge" ofType:@"png"];
+		NSData *iconData = [[[NSData alloc] initWithContentsOfFile:iconPath] autorelease];
+		NSLog(@"Large xfire Icon: %@", iconData);
+		if (iconData)
+		{
+			[properties setObject:[[iconData sha1Hash] stringRepresentation] forKey:IMHandlePropertyPictureIdentifier];
+		}
+	}
+	
+	[properties setObject:[NSArray arrayWithObjects:IMHandleCapabilityHandlePicture, IMHandleCapabilityMessaging, nil] forKey:IMHandlePropertyCapabilities];
 	
 	[_application plugInDidUpdateProperties:properties ofHandle:[fr userName]];
 }

@@ -13,7 +13,7 @@
 
 @class XfireSession;
 
-@interface XfireServicePlugin : NSObject <IMServicePlugIn, IMServicePlugInInstantMessagingSupport, IMServicePlugInGroupListSupport> {
+@interface XfireServicePlugin : NSObject <IMServicePlugIn, IMServicePlugInInstantMessagingSupport, IMServicePlugInGroupListSupport, IMServicePlugInGroupListHandlePictureSupport> {
 	
 	id <IMServiceApplication, IMServiceApplicationInstantMessagingSupport, IMServiceApplicationGroupListSupport> _application;
 	NSDictionary *_accountSettings;

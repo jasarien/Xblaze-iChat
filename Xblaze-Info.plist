@@ -23,8 +23,8 @@
 	<key>IMServiceCapabilities</key>
 	<array>
 		<string>IMServiceCapabilityInstantMessagingSupport</string>
-		<string>IMHandleCapabilityMessaging</string>
 		<string>IMServiceCapabilityGroupListSupport</string>
+		<string>IMServiceCapabilityGroupListHandlePictureSupport</string>
 	</array>
 	<key>IMUsesEnableSSLAccountSetting</key>
 	<false/>

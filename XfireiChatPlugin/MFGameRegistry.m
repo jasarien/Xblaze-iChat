@@ -67,6 +67,7 @@ NSString *kMFGameRegistryMacAppPathsKey = @"MacAppPaths";
 		
 		// Load the master game dictionary first
 		path = [[NSBundle bundleForClass:[self class]] pathForResource:@"Games" ofType:@"plist"];
+		NSLog(@"Path: %@", path);
 		if( path == nil )
 		{
 			// TODO: need to get some kind of warning up to the user
@@ -82,7 +83,7 @@ NSString *kMFGameRegistryMacAppPathsKey = @"MacAppPaths";
 			return nil;
 		}
 		
-		_defaultImage = [[NSImage imageNamed:@"XfireLarge.png"] retain];
+		_defaultImage = [[NSImage alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"XfireLarge" ofType:@"png"]];
 		
 //		// Then load the icons file
 //		path = [[NSBundle bundleForClass:[self class]] pathForResource:@"icons" ofType:@"mar"];
@@ -271,7 +272,8 @@ keys are:
 	{
 		NSString *shortGameName = [gameInfo objectForKey:kMFGameRegistryShortNameKey];
 		NSString *iconFileName = [[NSString stringWithFormat:@"XF_%@", shortGameName] uppercaseString];
-		icon = [[[NSImage alloc] initByReferencingFile:[[NSBundle bundleForClass:[self class]] pathForResource:iconFileName ofType:@"ICO"]] autorelease];
+		NSLog(@"icon file name: %@", iconFileName);
+		icon = [[[NSImage alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:iconFileName ofType:@"ICO"]] autorelease];
 		if (!icon)
 		{
 			icon = _defaultImage;

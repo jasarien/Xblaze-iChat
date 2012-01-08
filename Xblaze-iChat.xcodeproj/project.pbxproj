@@ -41,6 +41,9 @@
 		1AB159ED14B4FBD40004698B /* NSData_MFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB159D314B4FBD40004698B /* NSData_MFAdditions.m */; };
 		1AB159EE14B4FBD40004698B /* MFDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB159D514B4FBD40004698B /* MFDataScanner.m */; };
 		1AB159EF14B4FBD40004698B /* MFDataEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB159D714B4FBD40004698B /* MFDataEmitter.m */; };
+		1AFE050E14B902C1004E5444 /* Games.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE050D14B902C0004E5444 /* Games.plist */; };
+		1AFE051114B91953004E5444 /* XfireLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE050F14B91953004E5444 /* XfireLarge.png */; };
+		1AFE051214B91953004E5444 /* XfireSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE051014B91953004E5444 /* XfireSmall.png */; };
 		1AFE5EA014B8F15F00E4DA42 /* XF_123KICK.ICO in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE535D14B8F15100E4DA42 /* XF_123KICK.ICO */; };
 		1AFE5EA114B8F15F00E4DA42 /* XF_1602AD.ICO in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE535E14B8F15100E4DA42 /* XF_1602AD.ICO */; };
 		1AFE5EA214B8F15F00E4DA42 /* XF_1701AD.ICO in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE535F14B8F15100E4DA42 /* XF_1701AD.ICO */; };
@@ -2992,6 +2995,9 @@
 		1AB159D614B4FBD40004698B /* MFDataEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFDataEmitter.h; sourceTree = "<group>"; };
 		1AB159D714B4FBD40004698B /* MFDataEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MFDataEmitter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1AFE050B14B8FA0C004E5444 /* Xblaze-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Xblaze-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1AFE050D14B902C0004E5444 /* Games.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Games.plist; sourceTree = "<group>"; };
+		1AFE050F14B91953004E5444 /* XfireLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XfireLarge.png; sourceTree = "<group>"; };
+		1AFE051014B91953004E5444 /* XfireSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XfireSmall.png; sourceTree = "<group>"; };
 		1AFE535D14B8F15100E4DA42 /* XF_123KICK.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_123KICK.ICO; sourceTree = "<group>"; };
 		1AFE535E14B8F15100E4DA42 /* XF_1602AD.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_1602AD.ICO; sourceTree = "<group>"; };
 		1AFE535F14B8F15100E4DA42 /* XF_1701AD.ICO */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = XF_1701AD.ICO; sourceTree = "<group>"; };
@@ -6005,6 +6011,7 @@
 		1AFE535A14B8F15100E4DA42 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				1AFE050D14B902C0004E5444 /* Games.plist */,
 				1AFE535B14B8F15100E4DA42 /* images */,
 			);
 			name = resources;
@@ -6014,6 +6021,8 @@
 		1AFE535B14B8F15100E4DA42 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1AFE050F14B91953004E5444 /* XfireLarge.png */,
+				1AFE051014B91953004E5444 /* XfireSmall.png */,
 				1AFE535C14B8F15100E4DA42 /* game icons */,
 			);
 			path = images;
@@ -11845,6 +11854,9 @@
 				1AFE69E014B8F16000E4DA42 /* XF_ZUMA.ICO in Resources */,
 				1AFE69E114B8F16000E4DA42 /* XF_ZUMAW.ICO in Resources */,
 				1AFE69E214B8F16000E4DA42 /* XF_ZUO.ICO in Resources */,
+				1AFE050E14B902C1004E5444 /* Games.plist in Resources */,
+				1AFE051114B91953004E5444 /* XfireLarge.png in Resources */,
+				1AFE051214B91953004E5444 /* XfireSmall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
