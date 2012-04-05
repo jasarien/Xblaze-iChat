@@ -24,7 +24,9 @@
 	<array>
 		<string>IMServiceCapabilityInstantMessagingSupport</string>
 		<string>IMServiceCapabilityGroupListSupport</string>
+		<string>IMServiceCapabilityPresenceSupport</string>
 		<string>IMServiceCapabilityGroupListHandlePictureSupport</string>
+		<string>IMServiceCapabilityGroupListAuthorizationSupport</string>
 	</array>
 	<key>IMUsesEnableSSLAccountSetting</key>
 	<false/>

@@ -11874,7 +11874,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf /users/james/Library/iChat/PlugIns/Xblaze.imserviceplugin\ncp -R /Users/james/Library/Developer/Xcode/DerivedData/Xblaze-iChat-bhrccjpgjqpxutbjlcowumsluoak/Build/Products/Debug/Xblaze.imserviceplugin /users/james/Library/iChat/PlugIns/Xblaze.imserviceplugin\nexport SUDO_ASKPASS=/users/james/.sap\nsudo -A killall imagent\nopen -a iChat";
+			shellScript = "rm -rf /users/james/Library/iChat/PlugIns/Xblaze.imserviceplugin\ncp -R /Users/james/Library/Developer/Xcode/DerivedData/Xblaze-iChat-bhrccjpgjqpxutbjlcowumsluoak/Build/Products/Debug/Xblaze.imserviceplugin /users/james/Library/iChat/PlugIns/Xblaze.imserviceplugin\nkillall imagent\nopen -a iChat";
 		};
 /* End PBXShellScriptBuildPhase section */
 

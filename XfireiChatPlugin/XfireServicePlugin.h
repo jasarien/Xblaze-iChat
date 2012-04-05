@@ -13,12 +13,15 @@
 
 @class XfireSession;
 
-@interface XfireServicePlugin : NSObject <IMServicePlugIn, IMServicePlugInInstantMessagingSupport, IMServicePlugInGroupListSupport, IMServicePlugInGroupListHandlePictureSupport> {
+@interface XfireServicePlugin : NSObject <IMServicePlugIn, IMServicePlugInInstantMessagingSupport, IMServicePlugInGroupListSupport, IMServicePlugInPresenceSupport, IMServicePlugInGroupListHandlePictureSupport,
+                                          IMServicePlugInGroupListAuthorizationSupport, IMServicePlugInGroupListEditingSupport> {
 	
-	id <IMServiceApplication, IMServiceApplicationInstantMessagingSupport, IMServiceApplicationGroupListSupport> _application;
+	id <IMServiceApplication, IMServiceApplicationInstantMessagingSupport, IMServiceApplicationGroupListSupport, IMServiceApplicationGroupListAuthorizationSupport> _application;
 	NSDictionary *_accountSettings;
 	
 	XfireSession *_xfSession;
+	
+	NSString *_defaultIconHash;
 }
 
 @end
